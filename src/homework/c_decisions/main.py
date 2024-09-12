@@ -6,6 +6,8 @@ def main():
 
     result1=decisions.get_options_ratio(option, total)
     result2= decisions.get_faculty_rating(result1)
-    print ("Ratio: ", )
+    print ("Ratio: ", result1)
+    print ("Rating: ", result2)
+main()
 
 
