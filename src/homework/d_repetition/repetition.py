@@ -2,7 +2,7 @@
 def get_factorial(num1):
     total_x=1
     for x in range(num1, 0, -1):
-        total_x=tptal_x*x
+        total_x=total_x*x
     return total_x
 
 def sum_odd_numbers(num2):

@@ -1,7 +1,6 @@
 #
 import unittest
-from src.homework.d_repetition.repetition import get_factorial
-from src.homework.d_repetition.repetition import sum_odd_numbers
+from src.homework.d_repetition.repetition import get_factorial,sum_odd_numbers
 class Test_Config(unittest.TestCase):
     def test_get_factorial(self):
         self.assertEqual(24, get_factorial(4))
