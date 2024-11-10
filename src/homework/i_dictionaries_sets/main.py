@@ -1,36 +1,28 @@
-#
-import dictionary
+from dictionary import add_inventory,remove_inventory_widget
+
 def menu():
-    print("1-Get p distance matrix / 2-Exit")
-def display_result(result):
-    for row in result:
-        for item in row:
-            print(str(item).rjust(3, " "), end=" ")
-        print(" ")
+    print("Main Menu/ 1.Add or Update Item/ 2.Delete Item/ 3.Exit")
 
-def get_total_list():
-    num=int(input("How many list?"))
-    index=0
-    total_list=[]
-    while (index<num):
-        input_list=input("Please enter a comma-separated list: ")
-        s_list=input_list.split(",")
-        s_list=[value.strip() for value in s_list]
-        total-list.append(s_list)
-        index +=1
-
-    return total_list
-
-def run_menu():
-    option=0
-    while option !=2:
+def main():
+    inventory={}
+    while True:
         menu()
-        option=int(input("Select 1 or 2: "))
-    if option ==1:
-        result1=get_total_list()
-    elif option==2:
-        exit()
-    else:
-        run_menu
+        choice=input("Enter your selection: ")
 
-run_menu()
+        if choice=='1':
+            widget=input("Item name: ")
+            quantity=int(input(" Quantity: "))
+            add_inventory(inventory, widget, quantity)
+            print(f"Inventory updated: {inventory}\n")
+
+        elif choice=='2':
+            widget=input("Enter item name to delete: ")
+            remove_inventory_widget(inventory, widget)
+            print(f"Inventory after delete: {inventory}\n")
+
+        elif choice =='3':
+            print("Exit")
+            break
+        else:
+            print("Invalid value")
+main()
